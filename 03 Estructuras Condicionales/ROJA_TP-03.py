@@ -6,63 +6,77 @@
 import random
 from statistics import mode, median, mean
 
-# EJERCICIO 1
-edad = int(input("Ingrese su edad: "))
-if edad >= 18:
-    print("Es mayor de edad")
+# # EJERCICIO 1
+# edad = int(input("Ingrese su edad: "))
+# if edad >= 18:
+#     print("Es mayor de edad")
 
-# EJERCICIO 2
-nota = int(input("Ingrese su nota: "))
-if nota >= 6:
-    print("Aprobado")
-else:
-    print("Desaprobado")
+# # EJERCICIO 2
+# nota = int(input("Ingrese su nota: "))
+# if nota >= 6:
+#     print("Aprobado")
+# else:
+#     print("Desaprobado")
 
-# EJERCICIO 3
-numero = int(input("Ingrese un numero par: "))
-if numero % 2 == 0:
-    print("El numero es par")
-else:
-    print("El numero es impar")
+# # EJERCICIO 3
+# numero = int(input("Ingrese un numero par: "))
+# if numero % 2 == 0:
+#     print("El numero es par")
+# else:
+#     print("El numero es impar")
 
-# EJERCICIO 4
-edad = int(input("Ingrese su edad: "))
-if edad > 0 and edad < 12:
-    print("Niño/a")
-elif edad >= 12 and edad < 18:
-    print("Adolescente")
-elif edad >= 18 and edad < 30:
-    print("Adulto/a joven")
-elif edad >= 30:
-    print("Adulto/a")
+# # EJERCICIO 4
+# edad = int(input("Ingrese su edad: "))
+# if edad > 0 and edad < 12:
+#     print("Niño/a")
+# elif edad >= 12 and edad < 18:
+#     print("Adolescente")
+# elif edad >= 18 and edad < 30:
+#     print("Adulto/a joven")
+# elif edad >= 30:
+#     print("Adulto/a")
 
-# EJERCICIO 5
-contrasena = input("Ingrese la contraseña: ")
-if len(contrasena) >= 8 and len(contrasena) <= 14:
-    print("Ha ingresado una contraseña correcta")
-else:
-    print("Por favor, ingrese una contraseña de entre 8 y 14 caracteres")
+# # EJERCICIO 5
+# contrasena = input("Ingrese la contraseña: ")
+# if len(contrasena) >= 8 and len(contrasena) <= 14:
+#     print("Ha ingresado una contraseña correcta")
+# else:
+#     print("Por favor, ingrese una contraseña de entre 8 y 14 caracteres")
 
-# EJERCICIO 6
-numeros_aleatorios = [random.randint(1, 100) for i in range(50)]
+# # EJERCICIO 6
+# numeros_aleatorios = [random.randint(1, 100) for i in range(50)]
 
-media = mean(numeros_aleatorios)
-mediana = median(numeros_aleatorios)
-moda = mode(numeros_aleatorios)
+# media = mean(numeros_aleatorios)
+# mediana = median(numeros_aleatorios)
+# moda = mode(numeros_aleatorios)
 
-if media > mediana > moda:
-    print("Sesgo positivo")
-elif media < mediana < moda:
-    print("Sesgo negativo")
-elif media == mediana == moda:
-    print("Sin sesgo")
-else:
-    print("No hay sesgo claro")
+# if media > mediana > moda:
+#     print("Sesgo positivo")
+# elif media < mediana < moda:
+#     print("Sesgo negativo")
+# elif media == mediana == moda:
+#     print("Sin sesgo")
+# else:
+#     print("No hay sesgo claro")
 
-# EJERCICIO 7
-frase = input("Ingrese una palabra o frase: ")
-ultima_letra = frase[-1].lower()
-if ultima_letra == "a" or ultima_letra == "e" or ultima_letra == "i" or ultima_letra == "o" or ultima_letra == "u":
-    print(f"{frase}!")
-else:
-    print(frase)
+# # EJERCICIO 7
+# frase = input("Ingrese una palabra o frase: ")
+# ultima_letra = frase[-1].lower()
+# if ultima_letra == "a" or ultima_letra == "e" or ultima_letra == "i" or ultima_letra == "o" or ultima_letra == "u":
+#     print(f"{frase}!")
+# else:
+#     print(frase)
+
+# EJERCICIO 8
+nombre = input("Ingrese su nombre: ")
+print("1. Convertir nombre a mayusculas")
+print("2. Convertir nombre a minusculas")
+print("3. Convertir la primera letra a mayuscula")
+opcion = int(input("Ingrese la opcion deseada: "))
+
+if opcion == 1:
+    print(nombre.upper())
+elif opcion == 2:
+    print(nombre.lower())
+elif opcion == 3:
+    print(nombre.title())

@@ -95,3 +95,33 @@ elif magnitud >= 6 and magnitud < 7:
     print("Muy fuerte")
 elif magnitud >= 7:
     print("Extremo")
+
+# EJERCICIO 10
+dia = int(input("Ingrese el dia: ").lower())
+mes = int(input("Ingrese el numero del mes: ").lower())
+hemisferio = input("Ingrese el hemisferio (N/S): ").upper()
+
+if hemisferio == "N":
+    if mes == 12 and dia >= 21 or mes == 1 or mes == 2 or mes == 3 and dia <= 20:
+        print("El usuario se encuentra en invierno")
+    elif mes == 3 and dia >= 21 or mes == 4 or mes == 5 or mes == 6 and dia <= 20:
+        print("El usuario se encuentra en primavera")
+    elif mes == 6 and dia >= 21 or mes == 7 or mes == 8 or mes == 9 and dia <= 20:
+        print("El usuario se encuentra en verano")
+    elif mes == 9 and dia >= 21 or mes == 10 or mes == 11 or mes == 12 and dia <= 20:
+        print("El usuario se encuentra en otoño")
+    else:
+        print("Fecha no valida")
+elif hemisferio == "S":
+    if mes == 12 and dia >= 21 or mes == 1 or mes == 2 or mes == 3 and dia <= 20:
+        print("El usuario se encuentra en verano")
+    elif mes == 3 and dia >= 21 or mes == 4 or mes == 5 or mes == 6 and dia <= 20:
+        print("El usuario se encuentra en otoño")
+    elif mes == 6 and dia >= 21 or mes == 7 or mes == 8 or mes == 9 and dia <= 20:
+        print("El usuario se encuentra en invierno")
+    elif mes == 9 and dia >= 21 or mes == 10 or mes == 11 or mes == 12 and dia <= 20:
+        print("El usuario se encuentra en primavera")
+    else:
+        print("Fecha no valida")
+else:
+    print("Hemisferio no valido")

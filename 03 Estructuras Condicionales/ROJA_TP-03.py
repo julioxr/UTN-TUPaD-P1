@@ -3,6 +3,9 @@
 # Alumno: Julio Roja
 # Comision: 20
 
+import random
+from statistics import mode, median, mean
+
 # EJERCICIO 1
 edad = int(input("Ingrese su edad: "))
 if edad >= 18:
@@ -32,3 +35,26 @@ elif edad >= 18 and edad < 30:
     print("Adulto/a joven")
 elif edad >= 30:
     print("Adulto/a")
+
+# EJERCICIO 5
+contrasena = input("Ingrese la contraseña: ")
+if len(contrasena) >= 8 and len(contrasena) <= 14:
+    print("Ha ingresado una contraseña correcta")
+else:
+    print("Por favor, ingrese una contraseña de entre 8 y 14 caracteres")
+
+# EJERCICIO 6
+numeros_aleatorios = [random.randint(1, 100) for i in range(50)]
+
+media = mean(numeros_aleatorios)
+mediana = median(numeros_aleatorios)
+moda = mode(numeros_aleatorios)
+
+if media > mediana > moda:
+    print("Sesgo positivo")
+elif media < mediana < moda:
+    print("Sesgo negativo")
+elif media == mediana == moda:
+    print("Sin sesgo")
+else:
+    print("No hay sesgo claro")

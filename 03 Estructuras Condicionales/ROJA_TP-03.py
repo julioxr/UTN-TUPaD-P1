@@ -58,3 +58,11 @@ elif media == mediana == moda:
     print("Sin sesgo")
 else:
     print("No hay sesgo claro")
+
+# EJERCICIO 7
+frase = input("Ingrese una palabra o frase: ")
+ultima_letra = frase[-1].lower()
+if ultima_letra == "a" or ultima_letra == "e" or ultima_letra == "i" or ultima_letra == "o" or ultima_letra == "u":
+    print(f"{frase}!")
+else:
+    print(frase)
